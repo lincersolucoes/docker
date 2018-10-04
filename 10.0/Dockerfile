@@ -5,12 +5,21 @@ MAINTAINER Hugo Rebelo <hugo.rebelo@indigoway.com>
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
+            #build-essential \
             ca-certificates \
             curl \
             node-less \
+            #python-dev \
+            python-fs \
             python-gevent \
+            python-pandas \
             python-pip \
+            python-pypdf2 \
+            python-pysocks \
+            python-regex \
             python-renderpm \
+            python-simplejson \
+            python-sklearn \
             python-support \
             python-watchdog \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
@@ -19,7 +28,13 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
-        && pip install psycogreen==1.0
+        && pip install \
+            fpdf==1.7.2 \
+            ftpfs==0.2 \
+            s3fs==0.1.6 \
+            https://github.com/mattgwwalker/msg-extractor/zipball/master \
+            psycogreen==1.0
+            #regex
 
 # Install Odoo
 ENV ODOO_VERSION 10.0

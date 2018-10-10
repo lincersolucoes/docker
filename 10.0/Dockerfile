@@ -5,18 +5,17 @@ MAINTAINER Hugo Rebelo <hugo.rebelo@indigoway.com>
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
-            #build-essential \
+            build-essential \
             ca-certificates \
             curl \
+            libblas-dev \
+            liblapacke-dev \
             node-less \
-            #python-dev \
-            python-fs \
+            python-dev \
             python-gevent \
             python-pandas \
             python-pip \
-            python-pypdf2 \
             python-pysocks \
-            python-regex \
             python-renderpm \
             python-simplejson \
             python-sklearn \
@@ -28,13 +27,25 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
-        && pip install \
+        && pip install --upgrade pip setuptools \
+        && pip install \ 
+            #scipy \
+            awscli==1.16.14 \
+            beautifulsoup4==4.4.1 \
+            boto3==1.9.4 \
+            botocore==1.12.4 \
             fpdf==1.7.2 \
+            fs==0.5.4 \
             ftpfs==0.2 \
-            s3fs==0.1.6 \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \
-            psycogreen==1.0
-            #regex
+            nltk==3.1 \
+            pdfmerge==0.0.7 \
+            psycogreen==1.0 \
+            regex==2018.8.29 \
+            s3transfer==0.1.13 \
+            #scikit-learn==0.20.0 \
+            six==1.11.0 \
+            xlrd==1.1.0
 
 # Install Odoo
 ENV ODOO_VERSION 10.0

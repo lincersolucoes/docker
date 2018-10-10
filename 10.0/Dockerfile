@@ -33,9 +33,9 @@ RUN set -x; \
             awscli==1.16.14 \
             beautifulsoup4==4.4.1 \
             boto3==1.9.4 \
+            boto==2.49.0 \
             botocore==1.12.4 \
             fpdf==1.7.2 \
-            fs==0.5.4 \
             ftpfs==0.2 \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \
             nltk==3.1 \
@@ -43,9 +43,13 @@ RUN set -x; \
             psycogreen==1.0 \
             regex==2018.8.29 \
             s3transfer==0.1.13 \
-            #scikit-learn==0.20.0 \
             six==1.11.0 \
             xlrd==1.1.0
+
+# Extra libraries
+COPY ./eggs/ /eggs/
+RUN set -x; \
+        easy_install /eggs/fs-0.5.4-py2.7.egg
 
 # Install Odoo
 ENV ODOO_VERSION 10.0

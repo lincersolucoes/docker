@@ -38,11 +38,11 @@ RUN set -x; \
             fpdf==1.7.2 \
             ftpfs==0.2 \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \
+            markdown \
             nltk==3.1 \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
             regex==2018.8.29 \
-            s3transfer==0.1.13 \
             six==1.11.0 \
             xlrd==1.1.0
 

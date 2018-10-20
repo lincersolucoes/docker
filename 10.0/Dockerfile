@@ -8,19 +8,37 @@ RUN set -x; \
             build-essential \
             ca-certificates \
             curl \
+            imagemagick \
             libblas-dev \
+            libcups2-dev \
+            libffi-dev \
+            libgeoip-dev \
             liblapacke-dev \
+            libldap2-dev \
+            libpq-dev \
+            libsasl2-dev \
+            libssl-dev \
+            libtiff5-dev \
+            libxml2-dev \
+            libxslt1-dev \
             node-less \
+            poppler-utils \
+            python \
+            python-all-dev \
             python-dev \
             python-gevent \
             python-pandas \
             python-pip \
             python-pysocks \
             python-renderpm \
+            python-scipy \
             python-simplejson \
             python-sklearn \
             python-support \
             python-watchdog \
+            tesseract-ocr \
+            tesseract-ocr-por \
+            unixodbc-dev \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
         && echo '40e8b906de658a2221b15e4e8cd82565a47d7ee8 wkhtmltox.deb' | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
@@ -29,7 +47,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install --upgrade pip setuptools \
         && pip install \ 
-            #scipy \
+            Markdown==3.0.1 \
             awscli==1.16.14 \
             beautifulsoup4==4.4.1 \
             boto3==1.9.4 \
@@ -38,7 +56,7 @@ RUN set -x; \
             fpdf==1.7.2 \
             ftpfs==0.2 \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \
-            markdown \
+            markdown2==2.3.6 \
             nltk==3.1 \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \

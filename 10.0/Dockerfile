@@ -48,6 +48,7 @@ RUN set -x; \
         && pip install --upgrade pip setuptools \
         && pip install \ 
             Markdown==3.0.1 \
+            Num2Words==0.5.7 \
             awscli==1.16.14 \
             beautifulsoup4==4.4.1 \
             boto3==1.9.4 \
@@ -60,9 +61,12 @@ RUN set -x; \
             nltk==3.1 \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
+            pytz==2018.5 \
             regex==2018.8.29 \
             six==1.11.0 \
-            xlrd==1.1.0
+            viivakoodi==0.8 \
+            xlrd==1.1.0 \
+            xmltodict==0.11.0 
 
 # Extra libraries
 COPY ./eggs/ /eggs/

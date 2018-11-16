@@ -56,6 +56,7 @@ RUN set -x; \
             botocore==1.12.4 \
             fpdf==1.7.2 \
             ftpfs==0.2 \
+            google-cloud \
             google-cloud-translate \
             google-cloud-vision \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \

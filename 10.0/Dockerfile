@@ -56,12 +56,14 @@ RUN set -x; \
             botocore==1.12.4 \
             fpdf==1.7.2 \
             ftpfs==0.2 \
+            google-cloud-translate \
+            google-cloud-vision \
             https://github.com/mattgwwalker/msg-extractor/zipball/master \
             markdown2==2.3.6 \
             nltk==3.1 \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
-            pytz==2018.5 \
+            pytz \
             regex==2018.8.29 \
             six==1.11.0 \
             viivakoodi==0.8 \

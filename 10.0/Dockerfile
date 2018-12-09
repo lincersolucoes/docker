@@ -45,8 +45,10 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
-        && pip install --upgrade pip setuptools \
-        && pip install \ 
+        && pip install --upgrade pip setuptools 
+
+RUN set -x; \
+        pip install --no-cache-dir \ 
             Markdown==3.0.1 \
             Num2Words==0.5.7 \
             awscli==1.16.14 \
@@ -59,11 +61,13 @@ RUN set -x; \
             google-cloud \
             google-cloud-translate \
             google-cloud-vision \
-            https://github.com/mattgwwalker/msg-extractor/zipball/master \
+            https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
+            paramiko \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
+            pyopenssl \
             pytz \
             regex==2018.8.29 \
             six==1.11.0 \

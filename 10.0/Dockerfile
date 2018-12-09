@@ -61,6 +61,7 @@ RUN set -x; \
             google-cloud \
             google-cloud-translate \
             google-cloud-vision \
+            grpc \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \

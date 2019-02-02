@@ -63,11 +63,12 @@ RUN set -x; \
             google-cloud-vision \
             grpc \
             grpcio \
-            pdf2image \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
+            oauthlib \
             paramiko \
+            pdf2image \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
             pyopenssl \

@@ -21,6 +21,7 @@ RUN set -x; \
             libtiff5-dev \
             libxml2-dev \
             libxslt1-dev \
+            locales \
             node-less \
             poppler-utils \
             python \
@@ -39,6 +40,7 @@ RUN set -x; \
             tesseract-ocr \
             tesseract-ocr-por \
             unixodbc-dev \
+        && locale-gen pt_BR.UTF-8 \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
         && echo '40e8b906de658a2221b15e4e8cd82565a47d7ee8 wkhtmltox.deb' | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
@@ -72,8 +74,10 @@ RUN set -x; \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
             pyopenssl \
+            pysftp \
             pytz \
             regex==2018.8.29 \
+            rotate_backups_s3 \
             six==1.11.0 \
             viivakoodi==0.8 \
             xlrd==1.1.0 \

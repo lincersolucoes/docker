@@ -81,7 +81,8 @@ RUN set -x; \
             six==1.11.0 \
             viivakoodi==0.8 \
             xlrd==1.1.0 \
-            xmltodict==0.11.0 
+            xmltodict==0.11.0 \
+            zeep==3.2.0
 
 # Extra libraries
 COPY ./eggs/ /eggs/

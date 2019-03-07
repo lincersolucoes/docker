@@ -40,7 +40,6 @@ RUN set -x; \
             tesseract-ocr \
             tesseract-ocr-por \
             unixodbc-dev \
-        && locale-gen pt_BR.UTF-8 \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
         && echo '40e8b906de658a2221b15e4e8cd82565a47d7ee8 wkhtmltox.deb' | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
@@ -114,6 +113,12 @@ EXPOSE 8069 8071
 
 # Set the default config file
 ENV ODOO_RC /etc/odoo/odoo.conf
+
+# Install locales
+RUN set -x; \
+        echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen \
+        && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
+        && locale-gen
 
 # Set default user when running the container
 USER odoo

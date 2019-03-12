@@ -84,6 +84,7 @@ RUN pip3 install num2words xlwt \
             boto3==1.9.4 \
             boto==2.49.0 \
             botocore==1.12.4 \
+            extract-msg==0.22.1 \
             fpdf==1.7.2 \
             ftpfs==0.2 \
             google-cloud \
@@ -96,6 +97,8 @@ RUN pip3 install num2words xlwt \
             num2words \
             oauthlib \
             ofxparse==0.16 \
+            panda==0.3.1 \
+            pandas==0.24.1 \
             paramiko \
             pdf2image \
             phonenumbers \
@@ -109,11 +112,12 @@ RUN pip3 install num2words xlwt \
             pytrustnfe3>=0.10.0 \
             pytz \
             regex==2018.8.29 \
+            report==0.0.1 \
             rotate_backups_s3 \
+            simplejson==3.16.0 \
             six==1.11.0 \
             suds-jurko-requests \
             viivakoodi==0.8 \
-            wheel \
             wheel \
             xlrd==1.1.0 \
             xlwt \

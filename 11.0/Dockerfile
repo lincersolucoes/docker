@@ -8,10 +8,10 @@ ENV LANG C.UTF-8
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
+            #libssl1.0-dev \
             build-essential \
             ca-certificates \
             curl \
-            #libssl1.0-dev \
             dirmngr \
             fonts-noto-cjk \
             gnupg \
@@ -27,9 +27,11 @@ RUN set -x; \
             libssl-dev \
             libtiff5-dev \
             libxml2-dev \
+            libxmlsec1-dev \
             libxslt1-dev \
             locales \
             node-less \
+            pkg-config \
             python3-dev \
             python3-pip \
             python3-pyldap \
@@ -91,19 +93,31 @@ RUN pip3 install num2words xlwt \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
+            num2words \
             oauthlib \
+            ofxparse==0.16 \
             paramiko \
             pdf2image \
+            phonenumbers \
+            pillow==3.4.2 \
             psycogreen==1.0 \
+            pycnab240 \
             pyopenssl \
             pysftp \
+            python3-boleto \
+            python3-cnab \
+            pytrustnfe3>=0.10.0 \
             pytz \
             regex==2018.8.29 \
             rotate_backups_s3 \
             six==1.11.0 \
+            suds-jurko-requests \
             viivakoodi==0.8 \
             wheel \
+            wheel \
             xlrd==1.1.0 \
+            xlwt \
+            xmlsec \
             xmltodict==0.11.0
 
 COPY ./entrypoint.sh /

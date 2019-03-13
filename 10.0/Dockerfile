@@ -10,6 +10,7 @@ RUN set -x; \
             curl \
             imagemagick \
             libblas-dev \
+            libcairo2-dev \
             libcups2-dev \
             libffi-dev \
             libgeoip-dev \
@@ -23,6 +24,7 @@ RUN set -x; \
             libxslt1-dev \
             locales \
             node-less \
+            pkg-config \
             poppler-utils \
             python \
             python-all-dev \
@@ -72,6 +74,7 @@ RUN set -x; \
             pdf2image \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
+            pycairo==1.18.0 \
             pyopenssl \
             pysftp \
             pytz \

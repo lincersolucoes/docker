@@ -70,9 +70,11 @@ RUN set -x; \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
+            number2words==0.1.3 \
             oauthlib \
             paramiko \
             pdf2image \
+            pdfkit==0.6.1 \
             pdfmerge==0.0.7 \
             psycogreen==1.0 \
             pycairo==1.18.0 \

@@ -54,6 +54,7 @@ RUN set -x; \
 RUN set -x; \
         pip install --no-cache-dir \ 
             Markdown==3.0.1 \
+            pathlib==1.0.1 \
             Num2Words==0.5.7 \
             awscli==1.16.14 \
             beautifulsoup4==4.4.1 \
@@ -76,6 +77,7 @@ RUN set -x; \
             pdf2image \
             pdfkit==0.6.1 \
             pdfmerge==0.0.7 \
+            pika==1.0.1 \
             psycogreen==1.0 \
             pycairo==1.18.0 \
             pyopenssl \

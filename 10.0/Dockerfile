@@ -126,15 +126,11 @@ RUN set -x; \
         && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
         && locale-gen
 
-# Install bots dependencies
+# Update tzdata
 RUN set -x; \
         apt update && apt install -y \
-		firefox-esr \
-		xvfb \
-        && pip install \
-		webdriver-manager \
-		selenium \
-	&& rm -rf /var/lib/apt/lists/*
+                tzdata \
+        && rm -rf /var/lib/apt/lists/*
 
 # Set default user when running the container
 USER odoo

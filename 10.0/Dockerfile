@@ -49,7 +49,7 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
-        && pip install --upgrade pip setuptools 
+        && pip install --upgrade pip setuptools==44.1.0
 
 RUN set -x; \
         pip install --no-cache-dir \ 
@@ -66,8 +66,8 @@ RUN set -x; \
             google-cloud \
             google-cloud-translate \
             google-cloud-vision \
-            grpc \
-            grpcio \
+            grpc==0.3-19 \
+            grpcio==1.29.0 \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
@@ -89,6 +89,7 @@ RUN set -x; \
             viivakoodi==0.8 \
             xlrd==1.1.0 \
             xmltodict==0.11.0 \
+            workalendar==10.0.0 \
             zeep==3.2.0
 
 # Extra libraries

@@ -89,7 +89,7 @@ RUN set -x; \
             viivakoodi==0.8 \
             xlrd==1.1.0 \
             xmltodict==0.11.0 \
-            workalendar==10.0.0 \
+            workalendar==7.2.0 \
             zeep==3.2.0
 
 # Extra libraries

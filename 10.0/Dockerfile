@@ -63,28 +63,28 @@ RUN set -x; \
             botocore==1.12.4 \
             fpdf==1.7.2 \
             ftpfs==0.2 \
-            google-cloud \
-            google-cloud-translate \
-            google-cloud-vision \
+            google-cloud==0.34.0 \
+            google-cloud-translate==2.0.0 \
+            google-cloud-vision==0.39.0 \
             grpc==0.3-19 \
             grpcio==1.29.0 \
             https://github.com/mattgwwalker/msg-extractor/archive/v0.19.zip \
             markdown2==2.3.6 \
             nltk==3.1 \
             number2words==0.1.3 \
-            oauthlib \
-            paramiko \
-            pdf2image \
+            oauthlib==3.1.0 \
+            paramiko==2.6.0 \
+            pdf2image==1.9.0 \
             pdfkit==0.6.1 \
             pdfmerge==0.0.7 \
             pika==1.0.1 \
             psycogreen==1.0 \
             pycairo==1.18.0 \
-            pyopenssl \
-            pysftp \
-            pytz \
+            pyopenssl==19.1.0 \
+            pysftp==0.2.9 \
+            pytz==2012rc0 \
             regex==2018.8.29 \
-            rotate_backups_s3 \
+            rotate_backups_s3==0.3 \
             six==1.11.0 \
             viivakoodi==0.8 \
             xlrd==1.1.0 \
